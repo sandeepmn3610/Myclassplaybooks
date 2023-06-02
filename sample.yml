@@ -1,0 +1,14 @@
+--- # My sample playbook
+- hosts: all
+  become: yes
+
+  tasks: 
+    - name: creating a file with ansible playv=book
+      file: path=/tmp/hari.txt state=touch
+    
+    - name: creating a dir with playbook
+      file: path=/tmp/rajdir state=directory
+   
+    - name: copying a file to tmp 
+      copy: src=./bahrainfile dest=/home/ansible
+

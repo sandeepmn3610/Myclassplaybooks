@@ -1,0 +1,12 @@
+--- # copy playbook
+- name: copying a file to webservers
+  hosts: all
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: coying index file to all
+      copy:
+        src: /home/ansible/index.html
+        dest: /home/ansible
+

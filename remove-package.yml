@@ -1,0 +1,10 @@
+--- # Remove packag
+- name: removing packages from webserver
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: remove docker
+      yum:
+        name: docker
+        state: absent

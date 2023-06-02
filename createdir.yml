@@ -1,0 +1,11 @@
+--- # dir creation
+- name: create dir in webservers
+  hosts: webservers
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: crete directory
+      file:
+        path: /home/ansible/adithdir
+        state: directory

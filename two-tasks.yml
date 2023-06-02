@@ -1,0 +1,14 @@
+--- 
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: installing pkg
+      yum:
+        name: httpd
+        state: latest
+
+    - name: starting pkg
+      service:
+        name: httpd
+        state: started 

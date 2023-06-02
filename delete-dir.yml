@@ -1,0 +1,12 @@
+--- # delete dir
+- name: deleting a file
+  hosts: all
+  become: yes
+
+
+  tasks:
+    - name: deleting dir
+      file:
+        path: /home/ansible/adithdir
+        state: absent
+

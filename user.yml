@@ -1,0 +1,8 @@
+--- # user creation playbook
+- hosts: webservers
+  become: yes
+  connection: ssh
+
+  tasks: 
+  - name: creating a user
+    user: name=sandeep state=present

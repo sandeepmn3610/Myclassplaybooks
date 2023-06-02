@@ -1,0 +1,13 @@
+--- # variable playbook
+- hosts: all
+  user: ansible
+  connection: ssh
+  become: yes
+
+  vars:
+    pkgname: tree
+
+  tasks:
+    - name: installing tree sw
+      action: yum name='{{pkgname}}' state=installed
+

@@ -1,0 +1,11 @@
+--- # software installation
+- hosts: webservers
+  user: ansible
+  connection: ssh
+  become: yes
+
+  tasks:
+    - name: install packages in to webservers
+      yum:
+        name: docker
+        state: present

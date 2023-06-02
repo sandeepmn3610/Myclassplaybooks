@@ -1,0 +1,16 @@
+--- # var user creation
+- name: variables section
+  hosts: all
+  become: yes
+
+  vars:
+    user: sunny
+
+
+  tasks:
+    - name: creating user {{user}}
+      user:
+        name: "{{user}}"
+
+
+

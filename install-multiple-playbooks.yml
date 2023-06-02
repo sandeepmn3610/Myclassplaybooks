@@ -1,0 +1,10 @@
+--- # loops playbook
+- hosts: all 
+  become: yes
+
+  tasks: 
+    - name: install multiple playbooks
+      yum:
+        name: [ 'git', 'which', 'mysql', 'tree', 'wget', 'httpd', 'java', 'docker']
+        state: installed
+
